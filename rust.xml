@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+  <AutoComplete language="Rust">
+    <!-- ===== KEYWORDS ===== -->
+    <KeyWord name="as" />
+    <KeyWord name="async" />
+    <KeyWord name="await" />
+    <KeyWord name="break" />
+    <KeyWord name="const" />
+    <KeyWord name="continue" />
+    <KeyWord name="crate" />
+    <KeyWord name="dyn" />
+    <KeyWord name="else" />
+    <KeyWord name="enum" />
+    <KeyWord name="extern" />
+    <KeyWord name="false" />
+    <KeyWord name="fn" />
+    <KeyWord name="for" />
+    <KeyWord name="if" />
+    <KeyWord name="impl" />
+    <KeyWord name="in" />
+    <KeyWord name="let" />
+    <KeyWord name="loop" />
+    <KeyWord name="match" />
+    <KeyWord name="mod" />
+    <KeyWord name="move" />
+    <KeyWord name="mut" />
+    <KeyWord name="pub" />
+    <KeyWord name="ref" />
+    <KeyWord name="return" />
+    <KeyWord name="Self" />
+    <KeyWord name="self" />
+    <KeyWord name="static" />
+    <KeyWord name="struct" />
+    <KeyWord name="super" />
+    <KeyWord name="trait" />
+    <KeyWord name="true" />
+    <KeyWord name="type" />
+    <KeyWord name="union" />
+    <KeyWord name="unsafe" />
+    <KeyWord name="use" />
+    <KeyWord name="where" />
+    <KeyWord name="while" />
+
+    <!-- ===== MACROS ===== -->
+    <KeyWord name="println!" func="yes">
+      <Overload retVal="()" descr="Print to stdout with newline"/>
+    </KeyWord>
+    <KeyWord name="print!" func="yes">
+      <Overload retVal="()" descr="Print to stdout without newline"/>
+    </KeyWord>
+    <KeyWord name="eprintln!" func="yes">
+      <Overload retVal="()" descr="Print to stderr with newline"/>
+    </KeyWord>
+    <KeyWord name="eprint!" func="yes">
+      <Overload retVal="()" descr="Print to stderr without newline"/>
+    </KeyWord>
+    <KeyWord name="format!" func="yes">
+      <Overload retVal="String" descr="Format into a String"/>
+    </KeyWord>
+    <KeyWord name="vec!" func="yes">
+      <Overload retVal="Vec&lt;T&gt;" descr="Create a Vec literal"/>
+    </KeyWord>
+    <KeyWord name="assert!" func="yes">
+      <Overload retVal="()" descr="Assert boolean expression is true"/>
+    </KeyWord>
+    <KeyWord name="assert_eq!" func="yes">
+      <Overload retVal="()" descr="Assert two expressions are equal"/>
+    </KeyWord>
+    <KeyWord name="assert_ne!" func="yes">
+      <Overload retVal="()" descr="Assert two expressions are not equal"/>
+    </KeyWord>
+    <KeyWord name="panic!" func="yes">
+      <Overload retVal="!" descr="Panic with message"/>
+    </KeyWord>
+    <KeyWord name="unreachable!" func="yes">
+      <Overload retVal="!" descr="Indicate unreachable code"/>
+    </KeyWord>
+    <KeyWord name="unimplemented!" func="yes">
+      <Overload retVal="!" descr="Indicate unimplemented code"/>
+    </KeyWord>
+    <KeyWord name="todo!" func="yes">
+      <Overload retVal="!" descr="Indicate unfinished code"/>
+    </KeyWord>
+    <KeyWord name="dbg!" func="yes">
+      <Overload retVal="T" descr="Print and return value for debugging"/>
+    </KeyWord>
+    <KeyWord name="cfg!" func="yes">
+      <Overload retVal="bool" descr="Boolean evaluation of configuration flags"/>
+    </KeyWord>
+    <KeyWord name="include!" func="yes">
+      <Overload retVal="..." descr="Include file as expression"/>
+    </KeyWord>
+    <KeyWord name="include_str!" func="yes">
+      <Overload retVal="&amp;'static str" descr="Include UTF-8 file as string"/>
+    </KeyWord>
+    <KeyWord name="include_bytes!" func="yes">
+      <Overload retVal="&amp;'static [u8]" descr="Include file as byte array"/>
+    </KeyWord>
+
+    <!-- ===== CORE TYPES ===== -->
+    <KeyWord name="Vec" />
+    <KeyWord name="String" />
+    <KeyWord name="Option" />
+    <KeyWord name="Result" />
+    <KeyWord name="slice" />
+    <KeyWord name="str" />
+    <KeyWord name="Box" />
+    <KeyWord name="Rc" />
+    <KeyWord name="Arc" />
+    <KeyWord name="Weak" />
+    <KeyWord name="Cell" />
+    <KeyWord name="RefCell" />
+    <KeyWord name="Mutex" />
+    <KeyWord name="RwLock" />
+    <KeyWord name="Condvar" />
+    <KeyWord name="Barrier" />
+    <KeyWord name="Once" />
+    <KeyWord name="OnceLock" />
+    
+    <!-- ===== COLLECTIONS ===== -->
+    <KeyWord name="HashMap" />
+    <KeyWord name="HashSet" />
+    <KeyWord name="BTreeMap" />
+    <KeyWord name="BTreeSet" />
+    <KeyWord name="VecDeque" />
+    <KeyWord name="BinaryHeap" />
+    <KeyWord name="LinkedList" />
+    
+    <!-- ===== IO AND FILESYSTEM ===== -->
+    <KeyWord name="Path" />
+    <KeyWord name="PathBuf" />
+    <KeyWord name="OsStr" />
+    <KeyWord name="OsString" />
+    <KeyWord name="File" />
+    <KeyWord name="Stdin" />
+    <KeyWord name="Stdout" />
+    <KeyWord name="Stderr" />
+    <KeyWord name="BufReader" />
+    <KeyWord name="BufWriter" />
+    
+    <!-- ===== NETWORK ===== -->
+    <KeyWord name="TcpStream" />
+    <KeyWord name="TcpListener" />
+    <KeyWord name="UdpSocket" />
+    <KeyWord name="SocketAddr" />
+    <KeyWord name="IpAddr" />
+    <KeyWord name="Ipv4Addr" />
+    <KeyWord name="Ipv6Addr" />
+    
+    <!-- ===== TIME ===== -->
+    <KeyWord name="Duration" />
+    <KeyWord name="SystemTime" />
+    <KeyWord name="Instant" />
+    
+    <!-- ===== THREADING ===== -->
+    <KeyWord name="Thread" />
+    <KeyWord name="JoinHandle" />
+    
+    <!-- ===== ATOMIC TYPES ===== -->
+    <KeyWord name="AtomicBool" />
+    <KeyWord name="AtomicI8" />
+    <KeyWord name="AtomicI16" />
+    <KeyWord name="AtomicI32" />
+    <KeyWord name="AtomicI64" />
+    <KeyWord name="AtomicIsize" />
+    <KeyWord name="AtomicU8" />
+    <KeyWord name="AtomicU16" />
+    <KeyWord name="AtomicU32" />
+    <KeyWord name="AtomicU64" />
+    <KeyWord name="AtomicUsize" />
+    
+    <!-- ===== TRAITS ===== -->
+    <KeyWord name="Iterator" />
+    <KeyWord name="Clone" />
+    <KeyWord name="Copy" />
+    <KeyWord name="Default" />
+    <KeyWord name="Debug" />
+    <KeyWord name="Display" />
+    <KeyWord name="Error" />
+    <KeyWord name="From" />
+    <KeyWord name="Into" />
+    <KeyWord name="AsRef" />
+    <KeyWord name="AsMut" />
+    <KeyWord name="Deref" />
+    <KeyWord name="DerefMut" />
+    <KeyWord name="Send" />
+    <KeyWord name="Sync" />
+    <KeyWord name="Sized" />
+
+    <!-- ===== ENUM VARIANTS ===== -->
+    <KeyWord name="Some" />
+    <KeyWord name="None" />
+    <KeyWord name="Ok" />
+    <KeyWord name="Err" />
+    <KeyWord name="Ordering" />
+    <KeyWord name="Less" />
+    <KeyWord name="Equal" />
+    <KeyWord name="Greater" />
+
+    <!-- ===== CONSTRUCTORS AND CONVERSIONS ===== -->
+    <KeyWord name="new" func="yes">
+      <Overload retVal="..." descr="Default constructor for types"/>
+    </KeyWord>
+    <KeyWord name="with_capacity" func="yes">
+      <Overload retVal="..." descr="Create with initial capacity"/>
+    </KeyWord>
+    <KeyWord name="from" func="yes">
+      <Overload retVal="..." descr="Conversion from other type"/>
+    </KeyWord>
+    <KeyWord name="into" func="yes">
+      <Overload retVal="..." descr="Consume and convert to another type"/>
+    </KeyWord>
+    <KeyWord name="default" func="yes">
+      <Overload retVal="T" descr="Create default value"/>
+    </KeyWord>
+
+    <!-- ===== COLLECTION METHODS ===== -->
+    <KeyWord name="push" func="yes">
+      <Overload retVal="()" descr="Append element to collection"/>
+    </KeyWord>
+    <KeyWord name="pop" func="yes">
+      <Overload retVal="Option&lt;T&gt;" descr="Remove and return last element"/>
+    </KeyWord>
+    <KeyWord name="insert" func="yes">
+      <Overload retVal="()" descr="Insert element at position or key"/>
+    </KeyWord>
+    <KeyWord name="remove" func="yes">
+      <Overload retVal="T" descr="Remove element by index or key"/>
+    </KeyWord>
+    <KeyWord name="get" func="yes">
+      <Overload retVal="Option&lt;&amp;T&gt;" descr="Get reference to element"/>
+    </KeyWord>
+    <KeyWord name="get_mut" func="yes">
+      <Overload retVal="Option&lt;&amp;mut T&gt;" descr="Get mutable reference to element"/>
+    </KeyWord>
+    <KeyWord name="contains" func="yes">
+      <Overload retVal="bool" descr="Check if collection contains element"/>
+    </KeyWord>
+    <KeyWord name="len" func="yes">
+      <Overload retVal="usize" descr="Get number of elements"/>
+    </KeyWord>
+    <KeyWord name="is_empty" func="yes">
+      <Overload retVal="bool" descr="Check if collection is empty"/>
+    </KeyWord>
+    <KeyWord name="clear" func="yes">
+      <Overload retVal="()" descr="Remove all elements"/>
+    </KeyWord>
+    <KeyWord name="capacity" func="yes">
+      <Overload retVal="usize" descr="Get allocated capacity"/>
+    </KeyWord>
+    <KeyWord name="reserve" func="yes">
+      <Overload retVal="()" descr="Reserve capacity for additional elements"/>
+    </KeyWord>
+    <KeyWord name="shrink_to_fit" func="yes">
+      <Overload retVal="()" descr="Shrink capacity to fit current length"/>
+    </KeyWord>
+    <KeyWord name="extend" func="yes">
+      <Overload retVal="()" descr="Extend collection from iterator"/>
+    </KeyWord>
+    <KeyWord name="append" func="yes">
+      <Overload retVal="()" descr="Move all elements from another collection"/>
+    </KeyWord>
+    <KeyWord name="split_off" func="yes">
+      <Overload retVal="Vec&lt;T&gt;" descr="Split collection at index"/>
+    </KeyWord>
+    <KeyWord name="drain" func="yes">
+      <Overload retVal="Drain" descr="Remove range and get iterator"/>
+    </KeyWord>
+    <KeyWord name="retain" func="yes">
+      <Overload retVal="()" descr="Retain only elements matching predicate"/>
+    </KeyWord>
+    <KeyWord name="truncate" func="yes">
+      <Overload retVal="()" descr="Shorten to given length"/>
+    </KeyWord>
+
+    <!-- ===== STRING METHODS ===== -->
+    <KeyWord name="push_str" func="yes">
+      <Overload retVal="()" descr="Append string slice"/>
+    </KeyWord>
+    <KeyWord name="as_str" func="yes">
+      <Overload retVal="&amp;str" descr="Borrow as string slice"/>
+    </KeyWord>
+    <KeyWord name="as_bytes" func="yes">
+      <Overload retVal="&amp;[u8]" descr="Borrow as byte slice"/>
+    </KeyWord>
+    <KeyWord name="into_bytes" func="yes">
+      <Overload retVal="Vec&lt;u8&gt;" descr="Convert to byte vector"/>
+    </KeyWord>
+    <KeyWord name="from_utf8" func="yes">
+      <Overload retVal="Result&lt;String, FromUtf8Error&gt;" descr="Create from UTF-8 bytes"/>
+    </KeyWord>
+    <KeyWord name="chars" func="yes">
+      <Overload retVal="Iterator" descr="Get iterator over characters"/>
+    </KeyWord>
+    <KeyWord name="bytes" func="yes">
+      <Overload retVal="Iterator" descr="Get iterator over bytes"/>
+    </KeyWord>
+    <KeyWord name="lines" func="yes">
+      <Overload retVal="Iterator" descr="Get iterator over lines"/>
+    </KeyWord>
+    <KeyWord name="split" func="yes">
+      <Overload retVal="Iterator" descr="Split by pattern"/>
+    </KeyWord>
+    <KeyWord name="trim" func="yes">
+      <Overload retVal="&amp;str" descr="Trim whitespace"/>
+    </KeyWord>
+    <KeyWord name="to_lowercase" func="yes">
+      <Overload retVal="String" descr="Convert to lowercase"/>
+    </KeyWord>
+    <KeyWord name="to_uppercase" func="yes">
+      <Overload retVal="String" descr="Convert to uppercase"/>
+    </KeyWord>
+    <KeyWord name="replace" func="yes">
+      <Overload retVal="String" descr="Replace occurrences with new string"/>
+    </KeyWord>
+    <KeyWord name="find" func="yes">
+      <Overload retVal="Option&lt;usize&gt;" descr="Find substring position"/>
+    </KeyWord>
+
+    <!-- ===== OPTION/RESULT METHODS ===== -->
+    <KeyWord name="unwrap" func="yes">
+      <Overload retVal="T" descr="Get value or panic"/>
+    </KeyWord>
+    <KeyWord name="expect" func="yes">
+      <Overload retVal="T" descr="Get value or panic with message"/>
+    </KeyWord>
+    <KeyWord name="unwrap_or" func="yes">
+      <Overload retVal="T" descr="Get value or return default"/>
+    </KeyWord>
+    <KeyWord name="unwrap_or_else" func="yes">
+      <Overload retVal="T" descr="Get value or compute default"/>
+    </KeyWord>
+    <KeyWord name="map" func="yes">
+      <Overload retVal="Option&lt;U&gt;" descr="Map contained value"/>
+    </KeyWord>
+    <KeyWord name="map_err" func="yes">
+      <Overload retVal="Result&lt;T, F&gt;" descr="Map error value"/>
+    </KeyWord>
+    <KeyWord name="and_then" func="yes">
+      <Overload retVal="Option&lt;U&gt;" descr="Chain computations"/>
+    </KeyWord>
+    <KeyWord name="or_else" func="yes">
+      <Overload retVal="Option&lt;T&gt;" descr="Provide alternative"/>
+    </KeyWord>
+    <KeyWord name="ok_or" func="yes">
+      <Overload retVal="Result&lt;T, E&gt;" descr="Convert Option to Result"/>
+    </KeyWord>
+    <KeyWord name="is_some" func="yes">
+      <Overload retVal="bool" descr="Check if Option is Some"/>
+    </KeyWord>
+    <KeyWord name="is_none" func="yes">
+      <Overload retVal="bool" descr="Check if Option is None"/>
+    </KeyWord>
+    <KeyWord name="is_ok" func="yes">
+      <Overload retVal="bool" descr="Check if Result is Ok"/>
+    </KeyWord>
+    <KeyWord name="is_err" func="yes">
+      <Overload retVal="bool" descr="Check if Result is Err"/>
+    </KeyWord>
+    <KeyWord name="as_ref" func="yes">
+      <Overload retVal="Option&lt;&amp;T&gt;" descr="Convert to reference"/>
+    </KeyWord>
+    <KeyWord name="as_mut" func="yes">
+      <Overload retVal="Option&lt;&amp;mut T&gt;" descr="Convert to mutable reference"/>
+    </KeyWord>
+
+    <!-- ===== ITERATOR METHODS ===== -->
+    <KeyWord name="next" func="yes">
+      <Overload retVal="Option&lt;Item&gt;" descr="Get next element"/>
+    </KeyWord>
+    <KeyWord name="collect" func="yes">
+      <Overload retVal="Collection" descr="Collect into collection"/>
+    </KeyWord>
+    <KeyWord name="map" func="yes">
+      <Overload retVal="Iterator" descr="Map each element"/>
+    </KeyWord>
+    <KeyWord name="filter" func="yes">
+      <Overload retVal="Iterator" descr="Filter elements by predicate"/>
+    </KeyWord>
+    <KeyWord name="filter_map" func="yes">
+      <Overload retVal="Iterator" descr="Map and filter None values"/>
+    </KeyWord>
+    <KeyWord name="fold" func="yes">
+      <Overload retVal="A" descr="Accumulate values"/>
+    </KeyWord>
+    <KeyWord name="for_each" func="yes">
+      <Overload retVal="()" descr="Execute closure for each element"/>
+    </KeyWord>
+    <KeyWord name="enumerate" func="yes">
+      <Overload retVal="Iterator" descr="Add iteration count"/>
+    </KeyWord>
+    <KeyWord name="zip" func="yes">
+      <Overload retVal="Iterator" descr="Combine two iterators"/>
+    </KeyWord>
+    <KeyWord name="chain" func="yes">
+      <Overload retVal="Iterator" descr="Chain two iterators"/>
+    </KeyWord>
+    <KeyWord name="take" func="yes">
+      <Overload retVal="Iterator" descr="Take first n elements"/>
+    </KeyWord>
+    <KeyWord name="skip" func="yes">
+      <Overload retVal="Iterator" descr="Skip first n elements"/>
+    </KeyWord>
+    <KeyWord name="take_while" func="yes">
+      <Overload retVal="Iterator" descr="Take while predicate is true"/>
+    </KeyWord>
+    <KeyWord name="skip_while" func="yes">
+      <Overload retVal="Iterator" descr="Skip while predicate is true"/>
+    </KeyWord>
+    <KeyWord name="flat_map" func="yes">
+      <Overload retVal="Iterator" descr="Map and flatten"/>
+    </KeyWord>
+    <KeyWord name="flatten" func="yes">
+      <Overload retVal="Iterator" descr="Flatten nested structure"/>
+    </KeyWord>
+    <KeyWord name="rev" func="yes">
+      <Overload retVal="Iterator" descr="Reverse iterator"/>
+    </KeyWord>
+    <KeyWord name="count" func="yes">
+      <Overload retVal="usize" descr="Count elements"/>
+    </KeyWord>
+    <KeyWord name="last" func="yes">
+      <Overload retVal="Option&lt;Item&gt;" descr="Get last element"/>
+    </KeyWord>
+    <KeyWord name="nth" func="yes">
+      <Overload retVal="Option&lt;Item&gt;" descr="Get nth element"/>
+    </KeyWord>
+    <KeyWord name="all" func="yes">
+      <Overload retVal="bool" descr="Check if all elements match predicate"/>
+    </KeyWord>
+    <KeyWord name="any" func="yes">
+      <Overload retVal="bool" descr="Check if any element matches predicate"/>
+    </KeyWord>
+    <KeyWord name="find" func="yes">
+      <Overload retVal="Option&lt;Item&gt;" descr="Find element matching predicate"/>
+    </KeyWord>
+    <KeyWord name="position" func="yes">
+      <Overload retVal="Option&lt;usize&gt;" descr="Find position of element"/>
+    </KeyWord>
+    <KeyWord name="max" func="yes">
+      <Overload retVal="Option&lt;Item&gt;" descr="Get maximum element"/>
+    </KeyWord>
+    <KeyWord name="min" func="yes">
+      <Overload retVal="Option&lt;Item&gt;" descr="Get minimum element"/>
+    </KeyWord>
+    <KeyWord name="sum" func="yes">
+      <Overload retVal="T" descr="Sum all elements"/>
+    </KeyWord>
+    <KeyWord name="product" func="yes">
+      <Overload retVal="T" descr="Multiply all elements"/>
+    </KeyWord>
+
+    <!-- ===== HASHMAP/HASHSET METHODS ===== -->
+    <KeyWord name="contains_key" func="yes">
+      <Overload retVal="bool" descr="Check if key exists"/>
+    </KeyWord>
+    <KeyWord name="keys" func="yes">
+      <Overload retVal="Iterator" descr="Get iterator over keys"/>
+    </KeyWord>
+    <KeyWord name="values" func="yes">
+      <Overload retVal="Iterator" descr="Get iterator over values"/>
+    </KeyWord>
+    <KeyWord name="values_mut" func="yes">
+      <Overload retVal="Iterator" descr="Get mutable iterator over values"/>
+    </KeyWord>
+    <KeyWord name="entry" func="yes">
+      <Overload retVal="Entry" descr="Get entry for key"/>
+    </KeyWord>
+    <KeyWord name="or_insert" func="yes">
+      <Overload retVal="&amp;mut V" descr="Insert value if key doesn't exist"/>
+    </KeyWord>
+    <KeyWord name="or_insert_with" func="yes">
+      <Overload retVal="&amp;mut V" descr="Insert computed value if key doesn't exist"/>
+    </KeyWord>
+
+    <!-- ===== SORTING AND SEARCHING ===== -->
+    <KeyWord name="sort" func="yes">
+      <Overload retVal="()" descr="Sort elements"/>
+    </KeyWord>
+    <KeyWord name="sort_by" func="yes">
+      <Overload retVal="()" descr="Sort with comparator"/>
+    </KeyWord>
+    <KeyWord name="sort_by_key" func="yes">
+      <Overload retVal="()" descr="Sort by key function"/>
+    </KeyWord>
+    <KeyWord name="sort_unstable" func="yes">
+      <Overload retVal="()" descr="Unstable sort (faster)"/>
+    </KeyWord>
+    <KeyWord name="binary_search" func="yes">
+      <Overload retVal="Result&lt;usize, usize&gt;" descr="Binary search in sorted collection"/>
+    </KeyWord>
+
+    <!-- ===== FILE IO METHODS ===== -->
+    <KeyWord name="open" func="yes">
+      <Overload retVal="Result&lt;File, Error&gt;" descr="Open file for reading"/>
+    </KeyWord>
+    <KeyWord name="create" func="yes">
+      <Overload retVal="Result&lt;File, Error&gt;" descr="Create file for writing"/>
+    </KeyWord>
+    <KeyWord name="read_to_string" func="yes">
+      <Overload retVal="Result&lt;String, Error&gt;" descr="Read entire file to string"/>
+    </KeyWord>
+    <KeyWord name="read" func="yes">
+      <Overload retVal="Result&lt;usize, Error&gt;" descr="Read bytes into buffer"/>
+    </KeyWord>
+    <KeyWord name="write" func="yes">
+      <Overload retVal="Result&lt;usize, Error&gt;" descr="Write bytes from buffer"/>
+    </KeyWord>
+    <KeyWord name="write_all" func="yes">
+      <Overload retVal="Result&lt;(), Error&gt;" descr="Write all bytes"/>
+    </KeyWord>
+    <KeyWord name="flush" func="yes">
+      <Overload retVal="Result&lt;(), Error&gt;" descr="Flush output"/>
+    </KeyWord>
+    <KeyWord name="seek" func="yes">
+      <Overload retVal="Result&lt;u64, Error&gt;" descr="Seek to position"/>
+    </KeyWord>
+    <KeyWord name="metadata" func="yes">
+      <Overload retVal="Result&lt;Metadata, Error&gt;" descr="Get file metadata"/>
+    </KeyWord>
+    <KeyWord name="read_dir" func="yes">
+      <Overload retVal="Result&lt;ReadDir, Error&gt;" descr="Read directory contents"/>
+    </KeyWord>
+
+    <!-- ===== NETWORK METHODS ===== -->
+    <KeyWord name="connect" func="yes">
+      <Overload retVal="Result&lt;TcpStream, Error&gt;" descr="Connect to address"/>
+    </KeyWord>
+    <KeyWord name="bind" func="yes">
+      <Overload retVal="Result&lt;TcpListener, Error&gt;" descr="Bind to address"/>
+    </KeyWord>
+    <KeyWord name="accept" func="yes">
+      <Overload retVal="Result&lt;(TcpStream, SocketAddr), Error&gt;" descr="Accept incoming connection"/>
+    </KeyWord>
+    <KeyWord name="peer_addr" func="yes">
+      <Overload retVal="Result&lt;SocketAddr, Error&gt;" descr="Get peer address"/>
+    </KeyWord>
+
+    <!-- ===== TIME METHODS ===== -->
+    <KeyWord name="now" func="yes">
+      <Overload retVal="SystemTime" descr="Get current system time"/>
+    </KeyWord>
+    <KeyWord name="elapsed" func="yes">
+      <Overload retVal="Duration" descr="Get time elapsed since instant"/>
+    </KeyWord>
+    <KeyWord name="as_secs" func="yes">
+      <Overload retVal="u64" descr="Get duration in seconds"/>
+    </KeyWord>
+    <KeyWord name="as_millis" func="yes">
+      <Overload retVal="u128" descr="Get duration in milliseconds"/>
+    </KeyWord>
+    <KeyWord name="from_secs" func="yes">
+      <Overload retVal="Duration" descr="Create duration from seconds"/>
+    </KeyWord>
+
+    <!-- ===== SMART POINTER METHODS ===== -->
+    <KeyWord name="clone" func="yes">
+      <Overload retVal="T" descr="Clone value"/>
+    </KeyWord>
+    <KeyWord name="downgrade" func="yes">
+      <Overload retVal="Weak&lt;T&gt;" descr="Create weak reference"/>
+    </KeyWord>
+    <KeyWord name="upgrade" func="yes">
+      <Overload retVal="Option&lt;Arc&lt;T&gt;&gt;" descr="Upgrade weak to strong reference"/>
+    </KeyWord>
+    <KeyWord name="into_inner" func="yes">
+      <Overload retVal="T" descr="Consume wrapper and return inner value"/>
+    </KeyWord>
+    <KeyWord name="borrow" func="yes">
+      <Overload retVal="Ref&lt;T&gt;" descr="Borrow immutably"/>
+    </KeyWord>
+    <KeyWord name="borrow_mut" func="yes">
+      <Overload retVal="RefMut&lt;T&gt;" descr="Borrow mutably"/>
+    </KeyWord>
+    <KeyWord name="try_borrow" func="yes">
+      <Overload retVal="Result&lt;Ref&lt;T&gt;, BorrowError&gt;" descr="Try to borrow immutably"/>
+    </KeyWord>
+
+    <!-- ===== THREADING METHODS ===== -->
+    <KeyWord name="spawn" func="yes">
+      <Overload retVal="JoinHandle&lt;T&gt;" descr="Spawn new thread"/>
+    </KeyWord>
+    <KeyWord name="sleep" func="yes">
+      <Overload retVal="()" descr="Sleep for duration"/>
+    </KeyWord>
+    <KeyWord name="join" func="yes">
+      <Overload retVal="Result&lt;T, Box&lt;dyn Any + Send&gt;&gt;" descr="Wait for thread to finish"/>
+    </KeyWord>
+    <KeyWord name="lock" func="yes">
+      <Overload retVal="MutexGuard&lt;T&gt;" descr="Acquire mutex lock"/>
+    </KeyWord>
+    <KeyWord name="try_lock" func="yes">
+      <Overload retVal="Result&lt;MutexGuard&lt;T&gt;, TryLockError&gt;" descr="Try to acquire mutex lock"/>
+    </KeyWord>
+
+    <!-- ===== ATOMIC METHODS ===== -->
+    <KeyWord name="load" func="yes">
+      <Overload retVal="T" descr="Atomic load"/>
+    </KeyWord>
+    <KeyWord name="store" func="yes">
+      <Overload retVal="()" descr="Atomic store"/>
+    </KeyWord>
+    <KeyWord name="swap" func="yes">
+      <Overload retVal="T" descr="Atomic swap"/>
+    </KeyWord>
+    <KeyWord name="compare_exchange" func="yes">
+      <Overload retVal="Result&lt;T, T&gt;" descr="Atomic compare and exchange"/>
+    </KeyWord>
+    <KeyWord name="fetch_add" func="yes">
+      <Overload retVal="T" descr="Atomic fetch and add"/>
+    </KeyWord>
+    <KeyWord name="fetch_sub" func="yes">
+      <Overload retVal="T" descr="Atomic fetch and subtract"/>
+    </KeyWord>
+
+    <!-- ===== PATH METHODS ===== -->
+    <KeyWord name="exists" func="yes">
+      <Overload retVal="bool" descr="Check if path exists"/>
+    </KeyWord>
+    <KeyWord name="is_file" func="yes">
+      <Overload retVal="bool" descr="Check if path is file"/>
+    </KeyWord>
+    <KeyWord name="is_dir" func="yes">
+      <Overload retVal="bool" descr="Check if path is directory"/>
+    </KeyWord>
+    <KeyWord name="parent" func="yes">
+      <Overload retVal="Option&lt;&amp;Path&gt;" descr="Get parent directory"/>
+    </KeyWord>
+    <KeyWord name="file_name" func="yes">
+      <Overload retVal="Option&lt;&amp;OsStr&gt;" descr="Get file name"/>
+    </KeyWord>
+    <KeyWord name="extension" func="yes">
+      <Overload retVal="Option&lt;&amp;OsStr&gt;" descr="Get file extension"/>
+    </KeyWord>
+    <KeyWord name="join" func="yes">
+      <Overload retVal="PathBuf" descr="Join with another path"/>
+    </KeyWord>
+    <KeyWord name="to_str" func="yes">
+      <Overload retVal="Option&lt;&amp;str&gt;" descr="Convert to string slice"/>
+    </KeyWord>
+
+    <!-- ===== PRIMITIVE TYPES ===== -->
+    <KeyWord name="i8" />
+    <KeyWord name="i16" />
+    <KeyWord name="i32" />
+    <KeyWord name="i64" />
+    <KeyWord name="i128" />
+    <KeyWord name="isize" />
+    <KeyWord name="u8" />
+    <KeyWord name="u16" />
+    <KeyWord name="u32" />
+    <KeyWord name="u64" />
+    <KeyWord name="u128" />
+    <KeyWord name="usize" />
+    <KeyWord name="f32" />
+    <KeyWord name="f64" />
+    <KeyWord name="bool" />
+    <KeyWord name="char" />
+    <KeyWord name="str" />
+
+    <!-- ===== UTILITY FUNCTIONS ===== -->
+    <KeyWord name="drop" func="yes">
+      <Overload retVal="()" descr="Explicitly drop value"/>
+    </KeyWord>
+    <KeyWord name="mem::forget" func="yes">
+      <Overload retVal="()" descr="Forget value without running destructor"/>
+    </KeyWord>
+    <KeyWord name="mem::replace" func="yes">
+      <Overload retVal="T" descr="Replace value, return old value"/>
+    </KeyWord>
+    <KeyWord name="mem::swap" func="yes">
+      <Overload retVal="()" descr="Swap two values"/>
+    </KeyWord>
+    <KeyWord name="mem::take" func="yes">
+      <Overload retVal="T" descr="Take value, replace with default"/>
+    </KeyWord>
+    <KeyWord name="cmp::min" func="yes">
+      <Overload retVal="T" descr="Get minimum of two values"/>
+    </KeyWord>
+    <KeyWord name="cmp::max" func="yes">
+      <Overload retVal="T" descr="Get maximum of two values"/>
+    </KeyWord>
+  </AutoComplete>
+</NotepadPlus>
